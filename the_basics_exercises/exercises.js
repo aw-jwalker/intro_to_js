@@ -24,7 +24,6 @@ console.log("Exercise 3");
 
 console.log("Exercise 4: explain why this is 510 and not 15");
 console.log("console.log\('5' + 10\)");
-console.log();
 console.log("because 5 is a string and ten is an integer");
 console.log();
 console.log("Exercise 5: refactor so it shows 15");
@@ -44,8 +43,18 @@ console.log("Exercise 8: Create an array of pet names")
 let names = ['blue', 'odin', 'fenrir', 'lucky', 'bunny'];
 console.log("here are some pet names: " + names);
 console.log();
-console.log("Exercise 9")
+console.log("Exercise 9: object of names and animals")
+let pets = {
+  blue : 'dog',
+  odin : 'dog',
+  fenrir : 'dog',
+  lucky : 'dragon',
+  bunny : 'thestral',
+}
+console.log("object of pets:");
+console.log(pets);
 console.log();
+console.log("the rest of the exercises are just comparing strings and stuff");
 console.log("Exercise 10")
 console.log();
 console.log("Exercise 11")
