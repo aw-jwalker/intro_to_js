@@ -2,7 +2,7 @@
   "name": "intro_to_js",
   "version": "1.0.0",
   "description": "",
-  "main": "example.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/aw-jwalker/intro_to_js.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
