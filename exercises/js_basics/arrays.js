@@ -65,17 +65,46 @@ let array2 = [2, 6, 4];
 console.log(array1 === array2);
 // these are not equal because they point to different locations in memory
 
-
 console.log();
 console.log('8. type');
+function filter(input) {
+  // Is input an array?
+  console.log(Array.isArray(input));
+}
+
+filter(array1);
 
 console.log();
 console.log('9. travel');
+let destinations = ['Prague', 'London', 'Sydney', 'Belfast', 'Rome',
+  'Aruba', 'Paris', 'Bora Bora', 'Barcelona', 'Rio de Janeiro',
+  'Marrakesh', 'New York City'];
+
+function contains(str, arr) {
+  let presence = arr.indexOf(str);
+  if (presence === -1) {
+    console.log('the array does not contain: ' + str);
+  } else {
+    console.log(str + ' is at index ' + presence + ' of the array');
+  }
+}
+
+contains('Barcelona', destinations); // true
+contains('Nashville', destinations); // false
 
 console.log();
 console.log('10. passcode');
+let passcode = ['11', 'jZ5', 'hQ3f*', '8!7g3', 'p3Fs'];
+
+let passcodeStr = passcode.join('-');
+console.log(passcodeStr);
 
 console.log();
 console.log('11. grocery list');
+let groceryList = ['paprika', 'tofu', 'garlic', 'quinoa', 'carrots', 'broccoli', 'hummus'];
 
+while (groceryList.length > 0) {
+  console.log(groceryList.pop());
+}
+// using shift instead of pop will remove elements in the opposite order
 
