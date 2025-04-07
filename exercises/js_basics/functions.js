@@ -63,6 +63,11 @@ compareByLength('strength', 'dignity');      //  1
 compareByLength('humor', 'grace');           //  0
 
 console.log();
+console.log();
+console.log();
+console.log();
+console.log();
+console.log();
 console.log('7. transformation');
 function substituteJavaScript(a) {
   let strArr = a.split(" ");
@@ -75,11 +80,47 @@ console.log(substituteJavaScript('Captain Ruby'));
 console.log();
 console.log('8. internationalization 1');
 
+function greet(languageCode) {
+  switch (languageCode) {
+    case 'en': return 'Hi!';
+    case 'fr': return 'Salut!';
+    case 'pt': return 'Olá!';
+    case 'de': return 'Hallo!';
+    case 'sv': return 'Hej!';
+    case 'af': return 'Haai!';
+  }
+}
+
+console.log(greet('sv'));
+
 console.log();
 console.log('9. locale 1');
+function extractLanguage(locale) {
+  return (locale.split('_')[0]);
+}
+console.log(extractLanguage('en_US.UTF-8'));  // 'en'
+console.log(extractLanguage('en_GB.UTF-8'));  // 'en'
+console.log(extractLanguage('ko_KR.UTF-16')); // 'ko'
 
 console.log();
 console.log('10. locale 2');
+function extractRegion(locale) {
+  return(locale.split('.')[0].split('_')[1]);
+}
+console.log(extractRegion('en_US.UTF-8'));  // 'US'
+console.log(extractRegion('en_GB.UTF-8'));  // 'GB'
+console.log(extractRegion('ko_KR.UTF-16')); // 'KR'
 
 console.log();
 console.log('11. internationalization 2');
+function localGreet(locale) {
+  let language = extractLanguage(locale);
+  let region = extractRegion(locale);
+
+  switch (region) {
+    case 'US': return 'Hey!';
+    case 'GB': return 'Hello!';
+    case 'AU': return 'Howdy!';
+    default: return greet(language);
+  }
+}
